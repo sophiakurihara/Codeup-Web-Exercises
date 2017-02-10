@@ -1,0 +1,17 @@
+h1 {
+	font-family: "Raleway", Monospace;
+	font-weight: 600;
+	font-size: 35px;
+	color: #FFF;
+	background-color: #3b5998;
+	margin-top: -10px;
+	margin-right: -10px;
+	margin-left: -10px;
+	padding-left: 160px;
+	padding-top: 30px;
+	padding-bottom: 15px;
+}
+
+h1>label {
+	font-size: 10px #FFF;
+}

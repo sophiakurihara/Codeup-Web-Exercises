@@ -1,0 +1,78 @@
+h1, h2 {
+	color: teal;
+	text-decoration: underline;
+	font-family: "Courier New", Monospace;
+}
+
+body {
+	background-image: url("");
+	font-family: "Courier New", Monospace;
+}
+
+#container {
+	border: 3.5px;
+	padding: 100px;
+	padding-left: 300px;
+	padding-right: 300px;
+	margin-left: 50px auto;
+	margin-right: 50px auto;
+}
+	
+.box {
+	border: 5.5px solid black;
+	padding: 50px;
+	position: relative;
+	text-align: center;
+	vertical-align: center;
+	margin: 2px;
+}
+
+#box-hello {
+	
+
+}
+
+#box-quote {
+	
+}
+
+#box-lamp {
+	width: 500px;
+	height: 100px;
+}
+
+#box-five {
+	width: 500px;
+	height: 100px;
+}
+
+#box-questions {
+	width: 500px;
+	height: 100px;
+}
+
+#box-websites {
+	width: 500px;
+	height: 100px;
+}
+
+#box-vehicle {
+	width: 500px;
+	height: 100px;
+}
+
+#box-conversion {
+	width: 500px;
+	height: 100px;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+table, tr, th, td {
+	text-align: center;
+	vertical-align: center;
+}
+

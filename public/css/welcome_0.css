@@ -1,0 +1,22 @@
+/*CSS Stylesheet for official welcome_0.html*/
+
+section#banner {
+	background-image: url("../images/seventh_flag.jpg")
+}
+
+section#three.wrapper.style3.special {
+	background-image: url("../images/woodwall.jpg");
+}
+
+section#one.wrapper.style1 {
+	background-color: #1e2832;
+}
+
+blockquote {
+	font-size: 135%;
+}
+
+
+
+
+

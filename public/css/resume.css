@@ -1,0 +1,48 @@
+
+h2 {
+	padding-bottom: 30px;
+	font-size: 2.7em;
+}
+
+h5 {
+	color: #18bc9c;
+	letter-spacing: 5px;
+
+}
+
+hr {
+	border: none;
+	height: 1px;
+	color: #000;
+}
+.intro-text {
+	font-size: 50%;
+}
+
+.resume {
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	font-size: 115%;
+}
+
+#contact {
+	padding-top: 75px;
+	padding-bottom: 0px;
+}
+
+section#objective {
+	padding-top: 0px;
+	padding-bottom: 5px;
+	font-size: .954em;
+}
+
+section#skills {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+#mainNav {
+	font-size: 80%
+}
+

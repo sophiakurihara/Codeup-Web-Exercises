@@ -1,0 +1,117 @@
+html {
+	 background-image: url(../img/SVGstars3.gif);
+}
+h1 {
+	color: teal;
+	text-decoration: underline;
+	font-family: "Barrio", Monospace;
+	font-size: 40px;
+	position: relative;
+	padding-bottom: 0px;
+}
+
+h2 {
+	color: teal;
+	text-decoration: underline;
+	font-family: "Barrio", Monospace;
+}
+
+body {
+	font-family: "Raleway", Monospace;
+	padding-top: 10px;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+table {
+	text-align: center;
+	vertical-align: center;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-top: -10px;
+	margin-left: -100px;
+	border-style: double;
+	border: collapse;
+}
+
+th {
+	border: 5px;
+	border-bottom: solid 1px;
+
+}
+
+td {
+	position: relative;
+	padding: 5px 10px;
+	border: 5px;
+	border-bottom: dotted 1px;
+}
+
+ol {
+	list-style-type: lower-roman;
+}
+
+ul {
+	list-style-type: circle;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul.nav {
+	background-color: black;
+	color: #669999;
+	list-style-type: none;
+	display: block;
+	position: relative;
+
+}
+
+.nav>li {
+	display: inline;
+	border: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin:15px;
+}
+
+#container {
+	border: 3.5px;
+	padding: 50px;
+	padding-left: 300px;
+	padding-right: 300px;
+	margin-left: 50px auto;
+	margin-right: 50px auto;
+
+}
+	
+.box {
+	border: 5.5px solid black;
+	padding: 50px;
+	padding-top: 5px;
+	position: relative;
+	margin: 2px;
+	background-color: #FFF;
+	opacity: 0.70;
+}
+
+li>a:link, li>a:visited {
+	color: #669999;
+	text-decoration: none;
+}
+
+a:link {
+	color: #669999;
+}
+
+a:visited {
+	color: #ffff99;
+}
+
+a:hover {
+	color: #FF5050;
+}
+
