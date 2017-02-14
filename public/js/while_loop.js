@@ -3,13 +3,12 @@
 //generates a random number btwn 50-100
 var allCones = Math.floor(Math.random() * 50) + 50;
 
-//generates random number between 1 and 5
-
-var cones = Math.floor(Math.random() * 5) + 1;
-
 //ice cream cone loop simulator
 console.log("I have " + allCones + " cones.");
 do {
+	//generates random number between 1 and 5
+	var cones = Math.floor(Math.random() * 5) + 1;
+	
 	console.log(cones + " cone/s sold...")
 	allCones -= cones
 	console.log(allCones + " cone/s left.")
