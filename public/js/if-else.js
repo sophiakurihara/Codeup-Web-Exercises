@@ -44,9 +44,9 @@ if (amountGeorge > 200) {
 }
 
 
-console.log("Cameron | Before discount: " + (Cameron) + " |After discount (if any): " + (amountCameron));
-console.log("Ryan | Before discount: " + (Ryan) + " |After discount (if any): " + (amountRyan));
-console.log("George | Before discount: " + (George) + " |After discount (if any): " + (amountGeorge));
+console.log("Cameron | Before discount: $" + (Cameron) + " |After discount (if any): $" + (amountCameron));
+console.log("Ryan | Before discount: $" + (Ryan) + " |After discount (if any): $" + (amountRyan));
+console.log("George | Before discount: $" + (George) + " |After discount (if any): $" + (amountGeorge));
 
 
 //Coin flip exercise --> make sure to use '==' to find value equality

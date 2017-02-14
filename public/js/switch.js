@@ -23,6 +23,8 @@ switch(luckyNumber) {
 		console.log("Congratulations! Please enjoy your items for FREE. Thanks for choosing Walmart!");
 		break;
 }	
+
+//Number --> Month // I used a random number generator. // default case is only if entering # manually.
 var monthName = Math.floor(Math.random()*13)+1;
 
 switch(monthName) {
