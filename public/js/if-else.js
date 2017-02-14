@@ -1,5 +1,6 @@
 "use strict";
 
+//Grading Exercise
 var grades = 79; 
 
 if ((grades > 80) && (grades <= 100)) {
@@ -12,7 +13,7 @@ if ((grades > 80) && (grades <= 100)) {
 
 console.log(grades);
 
-
+//Discounted purchase exercise
 var Cameron = 180
 var Ryan = 250
 var George = 320
@@ -48,6 +49,7 @@ console.log("Ryan | Before discount: " + (Ryan) + " |After discount (if any): " 
 console.log("George | Before discount: " + (George) + " |After discount (if any): " + (amountGeorge));
 
 
+//Coin flip exercise --> make sure to use '==' to find value equality
 var flipACoin = Math.floor(Math.random()* 2);
 
 if (flipACoin == 0) {
