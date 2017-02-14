@@ -28,9 +28,22 @@ do {
 
 } while ((allCones - cones >= 0));
 
+
+
 //multiply by 2 loop.
 var i = 2;
 while(i <= 65536) {
 	console.log(i);
 	i = i * 2;
 }
+
+//random even number will be console.logged everytime page is refreshed
+
+var randomEven = Math.floor(Math.random() * 1000) + 1
+
+if (randomEven % 2 == 0) {
+	console.log("Your random even number is: " + randomEven);
+} else {
+	console.log("Sorry, not an even number.");
+}
+
