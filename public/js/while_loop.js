@@ -8,11 +8,11 @@ var allCones = Math.floor(Math.random() * 50) + 50;
 var cones = Math.floor(Math.random() * 5) + 1;
 
 //ice cream cone loop simulator
+console.log("I have " + allCones + " cones.");
 do {
-	console.log("I have " + allCones + " cones.");
-	console.log(cones + " cones sold...")
+	console.log(cones + " cone/s sold...")
 	allCones -= cones
-	console.log(allCones + " cones left.")
+	console.log(allCones + " cone/s left.")
 	
 	if (allCones == 0) {
 		console.log("Yayy! I sold all my cones!");
