@@ -27,5 +27,5 @@ function isOdd(numberPassed) {
 
 
 // TODO: Call the function 'isOdd' passing the variable 'random' as a parameter.
-isOdd(random
+isOdd(random)
 })();
