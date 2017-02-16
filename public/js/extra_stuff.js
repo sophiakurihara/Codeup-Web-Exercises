@@ -1,8 +1,22 @@
 "use strict";
 
 //toggles all characters in a string. reverse all characters to opposite case. special characters will not change.
+    function charToggle(string) {
+        var newArray = string.split("");
 
-    // var string = "aBc12#"
+        for (var i = 0; i < newArray.length; i++)  {
+            if (newArray[i].isUpperCase) {
+                newArray[i] = (newArray[i].toLowerCase);
+            } else if (newArray[i].isLowerCase) {
+                newArray[i] = (newArray[i].toUpperCase);
+            } else {
+                newArray[i] = newArray[i];
+            }
+        }
+
+        var newString = newArray.join("");
+        console.log(newString);
+    }
    
 
 
