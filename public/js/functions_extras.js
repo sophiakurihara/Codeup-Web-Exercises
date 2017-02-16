@@ -27,7 +27,7 @@ function getRandomIntBetween(min, max) {
 
 //how to determine if string has number?
 
-function add(a,b){
+function add(a,b) {
 	add = a + b;
 	console.log("The sum is " + add);
 }
