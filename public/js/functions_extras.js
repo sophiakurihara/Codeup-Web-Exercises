@@ -29,38 +29,38 @@ function isNumeric(input) {
 		console.log("false");
 	}
 }
+//OR return !isNaN(input);
 
 //how to determine if string has number? used modulus operator on string containing numerical value.
 
 function add(a,b) {
-	add = a + b;
-	console.log("The sum is " + add);
+	return a + b;
 }
 
 function subtract(a,b) {
-	subtract = a - b;
-	console.log("The difference is " + subtract);
+	return a - b;
 }
 
 function multiply(a,b) {
-	multiply = a * b
-	console.log("The product is " + multiply);
+	return a * b;
+
 }
 
 function divide(a,b) {
-	divide = (a/b).toFixed(2);
-	console.log("The quotient is: " + divide);
+	return (a/b).toFixed(2);
+
 }
 
-function square(a) {
-	square = multiply(a, a);
-	console.log(square);
+function square(num) {
+	return multiply(num, num);
 }
 
 //basic math functions
+//also use return x + y; instead of of console.log().
 
 function sumOfSquares(a,b) {
-	sumOfSquares = add(square(a), square(b));
-	console.log(sumOfSquares);
+	return add(square(a), square(b));
+	
 }
+
 
