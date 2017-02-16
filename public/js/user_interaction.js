@@ -6,6 +6,7 @@ var name = "";
 
 while (name === "") {
 	name = prompt("Hi! What is your name?")
+	name = name.trim();
 }
 
 // TODO: Show an alert message that welcomes the user based on their input.
@@ -22,3 +23,5 @@ if (pizza) {
 	alert("I think something might be wrong with you...");
 }
 //       Based on their answer show a creative alert message.
+
+

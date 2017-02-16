@@ -23,6 +23,7 @@
 
 
 //convert an amount to coins : 25, 10, 5, 1
+//created a random number generator to simulate this converter
 var coins = [25, 10, 5, 1];
 var amount = Math.floor(Math.random () * 101)+1;
 
