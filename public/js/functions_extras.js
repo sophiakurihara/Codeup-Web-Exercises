@@ -23,6 +23,26 @@ function getRandomIntBetween(min, max) {
 //used Math.random to generate random Int btwn specified min and max values.
 //+1 to max to make sure max is on # specified.
 
-function isNumeric(input) {
-	if (input )
+
+
+//how to determine if string has number?
+
+function add(a,b){
+	console.log("The sum is: " + (a + b));
+}
+
+function subtract(a,b) {
+	console.log("The difference is: " + (a - b));
+}
+
+function multiply(a,b) {
+	console.log("The product is: " + (a * b));
+}
+
+function divide(a,b) {
+	console.log("The quotient is: " + (a / b).toFixed(2));
+}
+
+function square(a) {
+
 }
