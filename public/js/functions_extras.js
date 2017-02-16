@@ -28,21 +28,33 @@ function getRandomIntBetween(min, max) {
 //how to determine if string has number?
 
 function add(a,b){
-	console.log("The sum is: " + (a + b));
+	add = a + b;
+	console.log("The sum is " + add);
 }
 
 function subtract(a,b) {
-	console.log("The difference is: " + (a - b));
+	subtract = a - b;
+	console.log("The difference is " + subtract);
 }
 
 function multiply(a,b) {
-	console.log("The product is: " + (a * b));
+	multiply = a * b
+	console.log("The product is " + multiply);
 }
 
 function divide(a,b) {
-	console.log("The quotient is: " + (a / b).toFixed(2));
+	divide = (a/b).toFixed(2);
+	console.log("The quotient is: " + divide);
 }
 
 function square(a) {
+	square = multiply(a, a);
+	console.log(square);
+}
 
+//basic math functions
+
+function sumOfSquares(a,b) {
+	sumOfSquares = add(square(a), square(b));
+	console.log(sumOfSquares);
 }
