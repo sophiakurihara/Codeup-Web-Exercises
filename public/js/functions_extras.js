@@ -23,7 +23,13 @@ function getRandomIntBetween(min, max) {
 //used Math.random to generate random Int btwn specified min and max values.
 //+1 to max to make sure max is on # specified.
 
-
+function isNumeric(input) {
+	if (input % 1 == 0) {
+		console.log("true");
+	} else {
+		console.log("false");
+	}
+}
 
 //how to determine if string has number?
 
