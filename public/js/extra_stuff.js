@@ -2,24 +2,24 @@
 
 //toggles all characters in a string. reverse all characters to opposite case. special characters will not change.
 
-    // function enterString(string) {
-    //     var stringArray = enterString.split("");
-    //     for (var i = 0; i < stringArray.length; i++) {
-    //         if (stringArray[i].isUpperCase) {
-    //             stringArray[i].toLowerCase
-    //         } else {
-    //             stringArray[i].toUpperCase
-    //         }
-    //     console.log(stringArray);
-    //     }
+    // var string = "aBc12#"
+   
 
-    // }
 
 //number at the end of a string. true if number == # of chars in string. else, false.
 
-    // function stringLength(string) {
-    // 	var newArray = stringLength.split("");
-    // }
+    function stringLength(string) {
+    	var newArray = string.split("");
+        var charNum = newArray[newArray.length - 1];
+
+        console.log("Number of characters is: " + charNum + "?");
+
+        if ((newArray.length) == charNum) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
 //convert an amount to coins : 25, 10, 5, 1
