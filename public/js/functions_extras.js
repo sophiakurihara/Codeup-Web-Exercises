@@ -1,6 +1,5 @@
 "use strict";
 
-
 function logVariable(color) {
 	console.log(color);
 }
@@ -18,7 +17,7 @@ console.log(result2);
 //var result2 returns a String with a value of "Sophie"
 
 function getRandomIntBetween(min, max) {
-	console.log(Math.floor(Math.random() * (max + 1)) + min);
+	console.log(Math.floor(Math.random() * (max - min)) + min);
 }
 //used Math.random to generate random Int btwn specified min and max values.
 //+1 to max to make sure max is on # specified.
@@ -31,7 +30,7 @@ function isNumeric(input) {
 	}
 }
 
-//how to determine if string has number?
+//how to determine if string has number? used modulus operator on string containing numerical value.
 
 function add(a,b) {
 	add = a + b;
@@ -64,3 +63,4 @@ function sumOfSquares(a,b) {
 	sumOfSquares = add(square(a), square(b));
 	console.log(sumOfSquares);
 }
+
