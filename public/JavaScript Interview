@@ -1,0 +1,16 @@
+- JavaScript is supplementary to html and css, and allows for user interactivity on websites.
+- JavaScript data types are string, boolean, number, null, undefined, objects, functions, arrays.
+- True and False: empty string - false, 0 - false, isNaN - false, !! SHOULD evaluate to true. any non empty string is true. any numercal # !0 is true.true == true, false == false. There is an order of operations when evaluating boolean statements
+
+- Three UI methods: alert, prompt, confirm
+- Ways to create an array: literal array notation var = [], and object constructor : var = newArray();
+- Loops: while, do-while, for loops, for-each.
+- switch statements are conditional statements used to check for one condition; in effect works simiarly as an if-else statement. COMPILES into something FASTER than an if-else.
+- ternary is also a conditional statement, works as a shorthand if-else
+
+- recursion : function that calls upon itself (loop)
+- parameter = argument
+- functions are first-class citizens can be used as, or stored in variables, passed as an argument for a function, or returned as a value from a function
+- function with no return statement = undefined
+- hoisting : is when variables declared in a scope will get declarations moved to the beginning of a function
+- IFFE : to avoid global variables and other functions from bleeding out into your other code. allows it to be in one self-contained module.
