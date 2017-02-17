@@ -9,6 +9,9 @@
 <h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
 <button id="defuser">Defuse the BOM</button>
 
+<h2 id ="message2">Wait! Click this instead! You have <span id="timer2">10</span> seconds...</h1>
+<button id="defuser2">Choose THIS</button>
+
 <script>
 (function() {
     "use strict";
@@ -40,6 +43,28 @@
         }
     }
 
+    var clickTimer = 10;
+
+    function countDown () {
+
+        if (clickTimer == 0) {
+            alert("You're still DEAD.");
+            document.body.innerHTML = '';
+        } else if (clickTimer > 0) {
+            document.getElementById('timer2').innerHTML = clickTimer;
+        }
+        clickTimer--;
+    }
+
+    setInterval(countDown, 1000);
+
+    function chooseThis () {
+        if (clickTimer >= 0) {
+            alert('You chose well');
+            location.reload(true);
+        }
+    }
+
     // Don't modify anything below this line!
     //
     // This causes the defuseTheBOM() function to be called
@@ -47,6 +72,9 @@
     // We will learn about events in the DOM lessons
     var defuser = document.getElementById('defuser');
     defuser.addEventListener('click', defuseTheBOM);
+
+    var defuser2 = document.getElementById('defuser2');
+    defuser2.addEventListener('click', chooseThis);
 })();
 </script>
 </body>
