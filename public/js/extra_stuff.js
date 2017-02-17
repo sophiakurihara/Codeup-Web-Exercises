@@ -1,39 +1,37 @@
 "use strict";
 
 //toggles all characters in a string. reverse all characters to opposite case. special characters will not change.
-    function charToggle(string) {
-        var newArray = string.split("");
-
-        for (var i = 0; i < newArray.length; i++)  {
-            if (newArray[i].isUpperCase) {
-                newArray[i] = (newArray[i].toLowerCase);
-            } else if (newArray[i].isLowerCase) {
-                newArray[i] = (newArray[i].toUpperCase);
-            } else {
-                newArray[i] = newArray[i];
-            }
-        }
-
-        var newString = newArray.join("");
-        console.log(newString);
+function charToggle(string) {
+  
+  var returnValue = "";
+  
+  var newArray = string.split("");
+  for(var i = 0; i < string.length; i++) {
+    if (newArray[i] == newArray[i].toUpperCase()) {
+      returnValue += newArray[i].toLowerCase();
+    } else if (newArray[i] == newArray[i].toLowerCase()) {
+      returnValue += newArray[i].toUpperCase();
+    } else {
+      returnValue += newArray[i];
     }
+  }
+    return returnValue;
+}
    
 
 
 //number at the end of a string. true if number == # of chars in string. else, false.
 
-    function stringLength(string) {
-    	var newArray = string.split("");
-        var charNum = newArray[newArray.length - 1];
-
-        console.log("Number of characters is: " + charNum + "?");
-
-        if ((newArray.length) == charNum) {
-            return true;
-        } else {
-            return false;
-        }
+function stringLength(string) {
+	var newArray = string.split("");
+    var charNum = newArray[newArray.length - 1]
+    console.log("Number of characters is: " + charNum + "?");
+    if ((newArray.length) == charNum) {
+        return true;
+    } else {
+        return false;
     }
+}
 
 
 //convert an amount to coins : 25, 10, 5, 1
@@ -64,6 +62,7 @@ function amountTocoins(amount, coins) {
     }
 } 
 console.log(amountTocoins(amount, coins));
+
 
 
 
