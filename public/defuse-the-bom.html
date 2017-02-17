@@ -48,7 +48,7 @@
     }
 
 
-    setInterval(updateTimer, 1000);
+    var intervalID = setInterval(updateTimer, 1000);
 
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
@@ -56,6 +56,7 @@
         if (detonationTimer >= 0) {
             alert('SAFE!');
             location.reload(true);
+            clearInterval(intervalID);
         }
     }
 
