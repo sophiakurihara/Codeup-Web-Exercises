@@ -1,0 +1,29 @@
+input[type=text]{
+	width: 133px;
+	margin-bottom: 25px;
+	margin-right: 1px;
+	margin-left: -1.5px;
+}
+
+input[type=text]#operator {
+	width: 30px;
+}
+
+input[type=button] {
+	margin-bottom: 10px;
+	width: 22%;
+	height: 3em;
+	text-align: center;
+	border: none;
+}
+#calculator {
+	width: 350px;
+	height: 300px;
+	position: stretch;
+	background-color: teal;
+	padding: 35px;
+	padding-bottom: 5px;
+	border-radius: 55px;
+	margin: auto;
+	
+}

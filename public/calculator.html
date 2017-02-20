@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My First Calculator</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/css/calculator.css">
+	</head>
+	<body>
+		<form name = "calc">
+		<header>
+		<h2><center>Calculate Some Stuff</center></h2>
+		</header>
+
+		<center>
+		<main id="calculator">
+		<section id="inputs">
+			<span>
+				<input type="text" name="left_operand" id="left_operand" readonly autofocus>
+				<input type="text" name="operator" id="operator" readonly>
+				<input type="text" name="right_operand" id="right_operand" readonly>
+			</span>
+		</section>
+
+		<section class="buttons">
+		<tr>
+		<td>
+		<input type="button" value="C">
+		<input type="button" value="+/-">
+		<input type="button" value="%">
+		<input type="button" value="/">
+		<br>
+		<input type="button" class="numbers" value="1">
+		<input type="button" class="numbers" value="2">
+		<input type="button" class="numbers" value="3">
+		<input type="button" value="*">
+		<br>
+		<input type="button" class="numbers" value="4">
+		<input type="button" class="numbers" value="5">
+		<input type="button" class="numbers" value="6">
+		<input type="button" value="-">
+		<br>
+		<input type="button" class="numbers" value="7">
+		<input type="button" class="numbers" value="8">
+		<input type="button" class="numbers" value="9">
+		<input type="button" value="+">
+		<br>
+		<input type="button" class="numbers" value="0">
+		<input type="button" class="numbers" value=".">
+		<input type="button" value="=">
+		</td>
+		</tr>
+		</section>
+		</main>
+		</center>
+
+		<script type="text/javascript" src="/js/calculator.js"></script>
+		</form>
+	</body>
+</html>

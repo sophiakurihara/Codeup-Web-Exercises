@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Extra Event Listener Exercises</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1 id="main-header">Hello, World!</h1>
+		<button id="btn1">Goodbye?</button>
+		
+		<span>
+		<ul>
+			<li>Assignment</li>
+			<li>Comparison</li>
+			<li>Conditionals</li>
+		</ul>
+		
+		<button id="btn2">BOOM</button>
+		<button id="btn3">unboom</button>
+		</span>
+		<p>
+			<button id="btn4">Never Gonna Give U Up</button>
+		</p>
+		<span>
+			<button id="btn5">Reverse</button>
+			<button id="btn6">esreveR</button>
+		</span>
+		<p>
+			<label for="band_name">What's your favorite band?</label>
+			<input type="text" name="band_name" id="band_name" placeholder="Who is it?">
+			<button id="btn7">I Know...</button>
+		</p>
+
+		<script>
+			"use strict";
+
+			var sayGoodbye = function(event) {
+				var noHello = document.getElementById("main-header");
+				noHello.innerHTML = "Goodbye, World."
+			}
+
+			document.getElementById("btn1").addEventListener("click", sayGoodbye);
+
+			var boldList = function(event) {
+				var listBold = document.getElementsByTagName("li");
+				listBold.style.fontWeight = "bold";
+			}
+
+			document.getElementById("btn2").addEventListener("click", boldList);
+		</script>
+	</body>
+</html>
