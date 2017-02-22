@@ -66,6 +66,8 @@ document.getElementById("divide").addEventListener("click", function(event) {
   document.getElementById("operator").value = this.value;
   operand = "right-operand";
 });
+
+
 // Setup equals
 document.getElementById("equals").addEventListener("click", function(event) {
   var left = Number(document.getElementById("left-operand").value);
