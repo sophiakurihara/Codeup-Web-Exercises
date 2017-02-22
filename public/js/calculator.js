@@ -75,3 +75,4 @@ document.getElementById("equals").addEventListener("click", function(event) {
   var operator = document.getElementById("operator").value;
   evaluate(left, right, operator);
 });
+
