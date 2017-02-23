@@ -6,26 +6,45 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/css/bootstrap.css">
 		<script type="text/javascript" src="/js/jquery_min.js"></script>
+		<style type="text/css">
+		h1 {
+			margin-bottom: 50px;
+		}
+		h3 {
+			text-align: left;
+		}
+		ul {
+			text-align: left;
+			list-style-type:none;
 
+		}
+		.contents {
+			text-align: center;
+		}
+		</style>
 		<script>
 			$(document).ready(function() {
-				var contents = $("#topic1");
-				alert(contents.text());
+				var popup = $("#topic1");
+				alert(popup.text());
+
+				alert($("#favorite").text());
+			
 			});
 		</script>
 	</head>
 	<body>
-		<h1>Pablo Neruda</h1>
-		<div class="poems">
-		
-		<h3 id="topic1">Popular Works of Pablo Neruda</h3>
-		<ul>
-			<li id="favorite">If You Forget Me</li>
-			<li>Don't Go Far Off</li>
-			<li>Your Laughter</li>
-			<li>A Dog Has Died</li>
-		</ul>
-		</div>
-	
+		<main class="contents">
+			<h1>Pablo Neruda</h1>
+			<div class="poems">
+			
+			<h3 id="topic1">Popular Works of Pablo Neruda</h3>
+			<ul>
+				<li id="favorite">If You Forget Me</li>
+				<li>Don't Go Far Off</li>
+				<li>Your Laughter</li>
+				<li>A Dog Has Died</li>
+			</ul>
+			</div>
+		</main>
 	</body>
 </html>
