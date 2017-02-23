@@ -15,7 +15,6 @@
 		}
 		ul {
 			text-align: left;
-			list-style-type:none;
 
 		}
 		.contents {
@@ -24,10 +23,26 @@
 		</style>
 		<script>
 			$(document).ready(function() {
-		
+				
+				$("h1").click(function () {
+					$("h1").css("background-color", "#ff9966")
+				});
+				
+				$("p").dblclick(function () {
+					$("p").css("font-size", "18px")
+				});
 
-				$("h1, p, li").css("background-color", "#ff9966");
-	
+				$("li").hover(
+
+					function () {
+						$(this).css("color", "red");
+					},
+
+					function () {
+						$(this).css("color", "#FFF");
+					}
+				
+				);
 
 			});
 		</script>
@@ -38,13 +53,15 @@
 			<div class="poems">
 			
 			<h3 id="topic1">Popular Works of Pablo Neruda</h3>
+		
 			<ul>
 				<li id="favorite">If You Forget Me</li>
 				<li>Don't Go Far Off</li>
 				<li>Your Laughter</li>
 				<li>A Dog Has Died</li>
 			</ul>
-
+		
+			
 			<h3>If You Forget Me</h3>
 				<p>
 							I want you to know
