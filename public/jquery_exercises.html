@@ -7,6 +7,9 @@
 		<link rel="stylesheet" href="/css/bootstrap.css">
 		<script type="text/javascript" src="/js/jquery_min.js"></script>
 		<style type="text/css">
+	/*	body {
+			background-image: url("/img/calcifer.jpg");
+		}*/
 		h1 {
 			margin-bottom: 50px;
 		}
@@ -24,15 +27,24 @@
 		<script>
 			$(document).ready(function() {
 				
-				$("h1").click(function () {
-					$("h1").css("background-color", "#ff9966")
-				});
+			$("h1").click(function () {
+					$(this).css("background-color", "#ff9966");
+			});
+
+			// you can include this: to add more functionality
+			//remember to name your function!!!
+
+				// var fn = function () {
+				// 	alert("you double clicked the button!")
+				// };
+
+				// $("h1").dblclick(fn);
 				
 				$("p").dblclick(function () {
 					$("p").css("font-size", "18px")
 				});
 
-				$("li").hover(
+			$("li").hover(
 
 					function () {
 						$(this).css("color", "red");
@@ -41,7 +53,6 @@
 					function () {
 						$(this).css("color", "#FFF");
 					}
-				
 				);
 
 			});
