@@ -7,9 +7,9 @@
 		<link rel="stylesheet" href="/css/bootstrap.css">
 		<script type="text/javascript" src="/js/jquery_min.js"></script>
 		<style type="text/css">
-	/*	body {
-			background-image: url("/img/calcifer.jpg");
-		}*/
+		body {
+			background-image: url("subtle_light_patterns/05white_brick.png");
+		}
 		h1 {
 			margin-bottom: 50px;
 		}
@@ -27,9 +27,12 @@
 		<script>
 			$(document).ready(function() {
 				
-			$("h1").click(function () {
+			$("h1").on("click", function () {
 					$(this).css("background-color", "#ff9966");
 			});
+			
+		
+
 
 			// you can include this: to add more functionality
 			//remember to name your function!!!
@@ -54,6 +57,11 @@
 						$(this).css("color", "#FFF");
 					}
 				);
+
+			$("#fname").keyup( function(key) {
+				console.log(key.keyCode + " was pressed");
+				console.log("Typing...") 
+			});
 
 			});
 		</script>
@@ -190,6 +198,14 @@
 							without leaving mine.
 				</p>
 			</div>
+			<div>
+			<form action="#">
+					<label for="fname">First Name</label>
+					<input type="text" id="fname" name="fname">
+				
+			</form>
+			</div>
+
 		</main>
 	</body>
 </html>
