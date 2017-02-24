@@ -76,7 +76,7 @@
 				
 				$("#invisibility").click(function (event) {
 					event.preventDefault();
-				$("dd").toggleClass("invisible")
+				$("dd").fadeToggle();
 				});
 				
 
@@ -85,9 +85,9 @@
 				});
 
 
-				$("li").each(function (index) {
-					$(this).click(function (event) {
-						$(this).parent().addClass("invisible");
+				$("h3").each(function (index) {
+					$(this).dblclick(function (event) {
+						$(this).next("ul").fadeToggle();
 					});
 				});
 			});
