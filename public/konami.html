@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="/css/bootstrap.css"> 
 	<script src="/js/jquery_min.js"></script>
 	<style type="text/css">
+		
 		body {
 			text-align: center;
 			background-image: url("/img/scuffed_static.jpg");
@@ -22,21 +23,45 @@
 		#kung_fu_cat {
 				opacity: 0.80;
 		}
-		
-		
+				
 </style>	
-<script>
+
+</head>
+<body>
+		<h1>こなみ コ-ド</h1>
+
+		<h2>こなみ は、 何 です か。</h2>
+		
+		<h3 id="greeting">がんばって！</h3>
+
+		<div id="young-padawan" class="you-passed">
+			<p>
+				<img src="/img/code_ninja.gif" id="code_ninja">
+			</p>
+			<p>
+				<img src="/img/kung_fu_cat.jpg" id="kung_fu_cat" height="300px"    width="450px">
+			</p>
+			<p>
+				<img src="/img/ninja_fight.gif" height="250px" width="700px" id"   ninja_fight">
+			</p>
+				<audio controls id="kung_fu">
+				<source src="/kung_fu.mp3">
+		</div>
+
+		<script>
 	"use strict";
 	$(document).ready(function () {
+		// creates an empty array to be appended to
 		var keys = [];
+		//solution for the konami code
 		var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
-
+			// hides these IDs until the condition is met
 			$("#young-padawan").hide();
 			$("#kung_fu").hide();
 
 			$(document).keyup(function(event){
 				keys.push(event.keyCode);
-
+				// controls mp3 file that is embedded into html
 				function sound() {
 					var audio = document.createElement("audio");
 					audio.src= "/kung_fu.mp3";
@@ -59,46 +84,20 @@
 					$("#greeting").html("よくやったね!");
 					$("#greeting").css("color", "#333300");
 					sound();
-				}
-
-						
+				}	
 				console.log(String.fromCharCode(event.keyCode));
-
 			});
-
-
-
+			// on dblclick, gives user a clue about the konami code
 			$("h2").on("dblclick", function () {
 				$("h2").html("[38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]");
 					$("h2").css("font-size", "10px");
 			});
-
+			// on dblclick translates hiragana in to alpha
 			$("h1").on("dblclick", function () {
 				$("h1").html("KONAMI CODE");
 			});
 			
 			});
 		</script>
-</head>
-<body>
-		<h1>こなみ コ-ド</h1>
-
-		<h2>こなみ は、 何 です か。</h2>
-		
-		<h3 id="greeting">がんばって！</h3>
-
-		<div id="young-padawan" class="you-passed">
-			<p>
-				<img src="/img/code_ninja.gif" id="code_ninja">
-			</p>
-			<p>
-				<img src="/img/kung_fu_cat.jpg" id="kung_fu_cat" height="300px"    width="450px">
-			</p>
-			<p>
-				<img src="/img/ninja_fight.gif" height="250px" width="700px" id"   ninja_fight">
-			</p>
-				<audio controls id="kung_fu">
-				<source src="/kung_fu.mp3">
-		</div>
 </body>
 </html>
