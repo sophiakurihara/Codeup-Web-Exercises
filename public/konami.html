@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <link rel="stylesheet" href="/css/bootstrap.css"> 
+    <script src="/js/jquery_min.js"></script>
+    <style type="text/css">
+    	body {
+    		text-align: center;
+    		background-image: url("/img/scuffed_static.jpg");
+    		color: limegreen;
+    	}
+
+    
+		
+    </style>
+    <script>
+        "use strict";
+        $(document).ready(function () {
+        	var keys = [];
+        	var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+
+        $("#young-padawan").hide();
+
+        $(document).keyup(function(event){
+        	keys.push(event.keyCode);
+
+        	if (keys.length > konami.length) {keys.shift(); }
+
+        	if(keys.toString() == konami.toString() ) {
+        		alert("You have added 30 lives!");
+        		$("#young-padawan").slideDown("slow");
+        		$("body").css("background", "#FFF");
+        		$("h1").css("font-size", "8px");
+        		$("h1").html("Konami Code");
+        	}
+
+            
+          console.log(String.fromCharCode(event.keyCode));
+
+        });
+
+        $("h2").on("dblclick", function () {
+        	$("h2").html("[38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]");
+        });
+        
+        });
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>こなみ コ-ド</h1>
+
+    <h2>こなみ は、 何 です か。</h2>
+    <p>がんばって！</p>
+
+    <div id="young-padawan" class="you-passed">
+    <p>
+    <img src="/img/code_ninja.gif">
+  	</p>
+  	<p>
+    <img src="/img/ninja_fight.gif" height="250px" width="700px">
+  	</p>
+    </div>
+
+</body>
+</html>
