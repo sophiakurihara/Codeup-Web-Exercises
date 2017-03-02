@@ -1,0 +1,88 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="description" content="">
+    	<meta name="author" content="">
+		
+		<title>Weather Map</title>
+		<link rel="stylesheet" href="/css/bootstrap.css">
+		<style type="text/css">
+		.row {
+			background-color: #999;
+			border-style: solid;
+			border-color: #000;
+		}
+
+		
+		</style>
+	</head>
+	<body>
+		<main class="container">
+		<h1 class="text-center">Weather Forecast</h1>
+		<h2 class="text-muted text-center">San Antonio, TX</h2>
+		
+		<div class="row text-center">
+			<section id="forecast"></section>
+		</div>
+		
+		</main>
+		<script src="/js/jquery_min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+
+		<script>
+		$(document).ready(function() {
+			"use strict";
+
+			var APPID = "7f8e3aa0aad113510e0c1eaafd1c17b8";
+			var url = "http://api.openweathermap.org/data/2.5/forecast/daily";
+			var display = $("#forecast");
+
+			function getWeather() {
+				$.get(url, {
+					APPID: APPID,
+					q: "San Antonio",
+					cnt: 3,
+					units: "imperial"
+				}).fail(function(data, status) {
+					alert("Failed to load:" + status);
+				}).done(function(data) {
+					console.log(data);
+					createTable(data);
+				});
+			}
+
+
+			function createTable(results) {
+				var content = "";
+				var something = "test";
+				
+				// element refers to Objects within Array
+				results.list.forEach(function(element, index) {
+					content += "<div class='col-md-4 forecast'>"
+					content += "<p>" + element.temp.max  
+					content += "/" + element.temp.min + "</p>"
+					content += "<div><img src='http://openweathermap.org/img/w/" + element.weather[0].icon + ".png'></div>"
+					content += "<p>Clouds: " + element.weather[0].description + "</p>"
+					content += "<p>Humidity: " + element.humidity + "</p>"
+					content += "<p>Wind: " + element.speed + "</p>"
+					content += "<p>Pressure: " + element.pressure + "</p>"
+
+					content += "</div>"
+
+					
+				});
+				display.html("");
+				display.html(content);
+				
+
+			}
+
+			getWeather();
+		});
+
+		</script>
+	</body>
+</html>

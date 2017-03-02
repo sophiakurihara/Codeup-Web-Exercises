@@ -30,12 +30,8 @@
     function makeRequest(){
     // TODO: Create an ajax GET request for /data/inventory.json
         var inventory = 
-        $.get("/data/inventory.json", {
-            data: {
-                limit: 5,
-                offset: 10
-            }
-        });
+        $.get("/data/inventory.json")
+        
 
         $.ajax("/data/inventory.json").done(function(data) {
            
