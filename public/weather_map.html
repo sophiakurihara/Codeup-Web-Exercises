@@ -18,6 +18,7 @@
 
 		
 		</style>
+
 	</head>
 	<body>
 		<main class="container">
@@ -26,6 +27,13 @@
 		
 		<div class="row text-center">
 			<section id="forecast"></section>
+		</div>
+		<div>
+			<label for="latitude">Latitude:</label>
+				<input type="text" name="latitude" id="latitude">
+			<label for="longitude">Longitude:</label>
+				<input type="text" name="longitude" id="longitude">
+			<button type="submit" id="submit">Search</button>
 		</div>
 		
 		</main>
@@ -38,6 +46,8 @@
 
 			var APPID = "7f8e3aa0aad113510e0c1eaafd1c17b8";
 			var url = "http://api.openweathermap.org/data/2.5/forecast/daily";
+			var lat = $("#latitude");
+			var long = $("#longitude");
 			var display = $("#forecast");
 
 			function getWeather() {
@@ -62,8 +72,8 @@
 				// element refers to Objects within Array
 				results.list.forEach(function(element, index) {
 					content += "<div class='col-md-4 forecast'>"
-					content += "<p>" + element.temp.max  
-					content += "/" + element.temp.min + "</p>"
+					content += "<p>" + element.temp.max + "&deg;"
+					content += "/" + element.temp.min + "&deg;</p>"
 					content += "<div><img src='http://openweathermap.org/img/w/" + element.weather[0].icon + ".png'></div>"
 					content += "<p>Clouds: " + element.weather[0].description + "</p>"
 					content += "<p>Humidity: " + element.humidity + "</p>"
@@ -81,6 +91,23 @@
 			}
 
 			getWeather();
+
+			$("#submit").click(function() {
+				function getWeatherNew() {
+					$.get(url, {
+						APPID: APPID,
+						lat: lat,
+						lon: long,
+						cnt: 3,
+						units: imperial
+					}).fail(function(data, status) {
+						alert("Failed to load:" + status);
+					}).done(function(data) {
+						console.log(data);
+						createTable(data);
+					});
+				}
+			});
 		});
 
 		</script>
