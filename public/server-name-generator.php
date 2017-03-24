@@ -1,8 +1,8 @@
 <?php
 	$adjectives = ['happy', 'grumpy', 'sleepy', 'dopey', 'tiny', 'silly',
-		'sneezy', 'noisy', 'fluffy', 'ugly'];
+		'sneezy', 'noisy', 'fluffy', 'ugly', 'annoying', 'blue'];
 	$nouns = ['puppy', 'kitty', 'fishy', 'bunny', 'birdy', 'bear', 'piggy',
-		'turtle', 'pony', 'aardvark'];
+		'turtle', 'pony', 'aardvark', 'penguin', 'taco', 'pizza'];
 
 	function randomAdjective($first) {
 		$a = array_rand($first);
@@ -23,6 +23,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 		<title>Server Name Generator</title>
 		<link rel="stylesheet" href="/css/bootstrap.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
@@ -31,6 +35,7 @@
 				background-image: url("/img/cute_animals.jpg");
 				background-repeat: repeat-x;
 			}
+
 			h2 {
 				margin-top: 0;
 				margin-bottom: 65px;
@@ -40,6 +45,18 @@
 			h3 {
 				font-size: 35px;
 			}
+
+			button {
+				color: #fff;
+				background-color: #000;
+				border-radius: 8px; 
+			}
+
+			button:hover {
+				color: #000;
+				background-color: #fff;
+			}
+
 			.container {
 				font-size: 25px;
 				font-family: 'Amatic SC', cursive;
@@ -66,31 +83,20 @@
 				margin-bottom: 25px;
 			}
 
-			button {
-				color: #fff;
-				background-color: #000;
-				border-radius: 8px; 
-			}
-
-			button:hover {
-				color: #000;
-				background-color: #fff;
-			}
-
-
 		</style>
 	</head>
+
 	<body><center>
 		<div class="container">
 			<section class="banner">
 				<h2> Welcome to the random name generator!</h2>
 			</section>
 			<section class="heading">
-				<h3>Your Random Name:</h3>
+				<h3>Your Random Name Is:</h3>
 			</section>
 			<section class="result">
-				<?php echo randomAdjective($adjectives);?>
-				<?php echo randomNoun($nouns);?>
+				<?= randomAdjective($adjectives);?>
+				<?= randomNoun($nouns);?>
 			</section>
 			<section>
 				<button id="refresh" name="refresh">Generate</button>
