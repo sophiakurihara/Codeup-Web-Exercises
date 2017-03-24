@@ -46,10 +46,11 @@
 
 			var APPID = "7f8e3aa0aad113510e0c1eaafd1c17b8";
 			var url = "http://api.openweathermap.org/data/2.5/forecast/daily";
-			var lat = $("#latitude");
-			var long = $("#longitude");
+			var lat = document.getElementById("latitude");
+			var long = document.getElementById("longitude");
 			var display = $("#forecast");
 
+			
 			function getWeather() {
 				$.get(url, {
 					APPID: APPID,
@@ -93,20 +94,24 @@
 			getWeather();
 
 			$("#submit").click(function() {
-				function getWeatherNew() {
+				console.log("click event");
+				console.log(lat);
+				console.log(long);
+				// this lat and long does get submitted when search is clicked
+				// goes to chicago
+				// but must find a way to use user input to search instead
 					$.get(url, {
 						APPID: APPID,
-						lat: lat,
-						lon: long,
+						lat: 41.8781,
+						lon: 87.6928,
 						cnt: 3,
-						units: imperial
+						units: "imperial"
 					}).fail(function(data, status) {
 						alert("Failed to load:" + status);
 					}).done(function(data) {
 						console.log(data);
 						createTable(data);
 					});
-				}
 			});
 		});
 
