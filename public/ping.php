@@ -1,7 +1,5 @@
 <?php
 function pageController() {
-	var_dump($_GET);
-
 	$hits = [];
 
 	if(isset($_GET['hit'])) {
@@ -35,20 +33,18 @@ extract(pageController());
 				position: relative;
 				left: 300px;
 				top: 35px;
+				margin-top: 150px;
 			}
-
 			.paddle>img {
 				position: relative;
 				width: 100px;
 				height: 100px;
 				margin-top: 50px;
 			}
-
 			.player>img {
 				position: relative;
 				width: 150px;
 				height: 150px;
-				margin-top: -50;
 			}
 		</style>
 	</head>
