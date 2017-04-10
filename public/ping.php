@@ -1,9 +1,11 @@
 <?php
+require_once 'functions.php';
+
 function pageController() {
 	$hits = [];
 
-	if(isset($_GET['hit'])) {
-		$hits['count'] = $_GET['hit'];
+	if(inputHas('hit')) {
+		$hits['count'] = inputGet('hit');
 	} else {
 		$hits['count'] = 0;
 	}
@@ -51,9 +53,9 @@ extract(pageController());
 	<body>
 		<h1>Player 1</h1>
 		<div class="container">
-			<h2>HIT: <?= $count; ?></h2>
+			<h2>HIT: <?= escape($count); ?></h2>
 			<form method="GET" action="/pong.php">
-				<button type="submit" name="hit" value="<?= $count + 1 ?>">Hit</button>
+				<button type="submit" name="hit" value="<?= escape($count) + 1 ?>">Hit</button>
 				<button type="submit" name="miss">Miss</button>
 		
 			<div class="paddle">
