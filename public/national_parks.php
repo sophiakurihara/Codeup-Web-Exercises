@@ -83,6 +83,7 @@ extract(pageController($dbc));
 						<th>Location: </th>
 						<th>Area in Acres: </th>
 						<th>Date Established: </th>
+						<th>Description:</th>
 					</tr>
 					<?php foreach($parks as $park): ?>
 						<tr>
@@ -90,6 +91,7 @@ extract(pageController($dbc));
 							<td><?= $park['location'] ?></td>
 							<td><?= $park['area_in_acres']?></td>
 							<td><?= $park['date_established']?></td>
+							<td><?= $park['description'] ?></td>
 						</tr>
 					<?php endforeach; ?>	
 				</table>
