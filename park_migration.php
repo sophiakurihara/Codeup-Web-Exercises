@@ -17,3 +17,7 @@ $createTable = 'CREATE TABLE national_parks(
 
 
 $dbc->exec($createTable);
+
+$addDescription = 'ALTER TABLE national_parks ADD description VARCHAR(500)';
+
+$dbc->exec($addDescription);
