@@ -12,3 +12,4 @@ $dbc = new PDO(
 
 $dbc->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+return $dbc;
